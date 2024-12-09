@@ -75,8 +75,8 @@ def create_schema():
             tournament_id UUID REFERENCES tournament_data(tournament_id) ON DELETE CASCADE,
             winner_id UUID REFERENCES team_data(team_id) ON DELETE CASCADE,
             loser_id UUID REFERENCES team_data(team_id) ON DELETE CASCADE,
-            winner_odds DECIMAL(10, 2) NOT NULL,
-            loser_odds DECIMAL(10, 2) NOT NULL
+            winner_odds FLOAT NOT NULL,
+            loser_odds FLOAT NOT NULL
         );
         """
         
