@@ -140,7 +140,7 @@ def insert_data_into_db(cur, betting_data, all_series, all_games, tournament_dat
 def find_loser_odds(winner_betting_odds):
     bookmaker_margin = 0.07
     winning_team_implied_odds = winner_betting_odds
-    losing_team_implied_odds = 1 / ((1 + bookmaker_margin) - 1 / winning_team_implied_odds)
+    losing_team_implied_odds = 1 / ((1 + bookmaker_margin) - (1 / winning_team_implied_odds))
     
     return losing_team_implied_odds
 
